@@ -59,3 +59,13 @@ void Sierpinski::draw_triangle(QPainter &p, const Triangle &t) const {
 	p.drawLine(t.p2, t.p3);
 	p.drawLine(t.p3, t.p1);
 }
+
+std::ostream &operator<<(std::ostream &os, const QPoint &p) {
+	os << "QPoint(" << p.x() << ", " << p.y() << ")";
+	return os;
+}
+
+std::ostream &operator<<(std::ostream &os, const Sierpinski::Triangle &t) {
+	os << "Triangle(" << t.p1 << ", " << t.p2 << ", " << t.p3 << ")";
+	return os;
+}

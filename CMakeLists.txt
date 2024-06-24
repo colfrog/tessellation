@@ -11,6 +11,7 @@ qt_add_executable(tessellation
   main.cpp
   TessellationView.cpp
   Sierpinski.cpp
+  SierpinskiTiles.cpp
 )
 
 target_link_libraries(tessellation PRIVATE Qt6::Widgets)

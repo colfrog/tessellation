@@ -1,5 +1,6 @@
 #include "TessellationView.h"
 #include "Sierpinski.h"
+#include "SierpinskiTiles.h"
 
 TessellationView::TessellationView(QWidget *parent) : QWidget(parent) {}
 
@@ -32,6 +33,12 @@ void TessellationView::keyPressEvent(QKeyEvent *event) {
 			delete m_tess;
 
 		m_tess = new Sierpinski();
+		break;
+	case Qt::Key_T:
+		if (m_tess != nullptr)
+			delete m_tess;
+
+		m_tess = new SierpinskiTiles();
 		break;
 	}
 
