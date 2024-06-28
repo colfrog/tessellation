@@ -5,7 +5,6 @@
 void SierpinskiTiles::operator()(QPainter &p, size_t width, size_t height) {
 	int th = height/8;
 	int tw = 2*th/sqrt(3);
-	std::cout << tw << ", " << th << ", " << sqrt(tw*tw + th*th) << std::endl;
 
 	Sierpinski::Triangle base_triangle1{QPoint(0, 0), QPoint(tw, 0), QPoint(tw/2, th)};
 	Sierpinski::Triangle base_triangle2{QPoint(tw/2, th), QPoint(tw + tw/2, th), QPoint(tw, 0)};
